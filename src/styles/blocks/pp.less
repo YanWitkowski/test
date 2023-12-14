@@ -1,4 +1,5 @@
 .pp {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -9,11 +10,13 @@
     overflow-y: auto;
     z-index: 110;
     background-color: gray;
+
     //display: none;
     @supports (backdrop-filter: blur(25px)) {
         background-color: @black_40;
         backdrop-filter: blur(25px);
     }
+
     &__container {
         box-sizing: border-box;
         display: flex;
@@ -28,6 +31,7 @@
         background-position: 0 0;
         background-size: auto;
     }
+
     &__title {
         margin: -110px 0 70px;
         box-sizing: border-box;
@@ -42,12 +46,14 @@
         letter-spacing: 0.44px;
         color: @white;
     }
+
     &__sticky-close {
         position: sticky;
         align-self: flex-end;
         top: 0;
         width: 0;
     }
+
     &__sticky-btn {
         position: absolute;
         right: -70px;
@@ -70,6 +76,7 @@
             }
         }
     }
+
     &__form {
         margin: auto;
         max-width: 870px;
