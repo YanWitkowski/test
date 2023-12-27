@@ -871,7 +871,7 @@ textarea:focus::placeholder {
 .about {
   padding-bottom: 90px;
 }
-.about__container {
+.about__block__container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
