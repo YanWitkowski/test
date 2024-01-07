@@ -43,23 +43,52 @@ html,body {
     object-fit: cover;
   }
 
-  button{
-    box-shadow: none;
+input,
+textarea, 
+button,
+select {
+  box-shadow: none;
     outline: none;
     color: @black;
     font-family: @font1;
+  }
+
+  button{
     cursor: pointer;
   }
 
   input,
-textarea {
-  &::placeholder {
-    color: #6C6C6C;
+  textarea {
+    &::-webkit-input-placeholder {
+      color: #6c6c6c;
+    }
+    &::-moz-placeholder {
+      color: #6c6c6c;
+    }
+    &:-moz-placeholder {
+      color: #6c6c6c;
+    }
+    &:-ms-input-placeholder {
+      color: #6c6c6c;
+    }
+
+    input:focus,
+  textarea:focus {
+    &::-webkit-input-placeholder {
+      color: transparent;
+    }
+    &::-moz-placeholder {
+      color: transparent;
+    }
+    &:-moz-placeholder {
+      color: transparent;
+    }
+    &:-ms-input-placeholder {
+      color: transparent;
+    }
   }
-}
-input:focus,
-textarea:focus {
-  &::placeholder {
-    color: transparent
+
+  textarea {
+    resize: none;
   }
 }
