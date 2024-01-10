@@ -234,7 +234,7 @@ textarea textarea {
 .radio__input:checked ~ .radio__mark {
   background-color: #1f1e1e;
 }
-.radio__input__mark {
+.radio__mark {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: absolute;
@@ -250,7 +250,7 @@ textarea textarea {
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
-.radio__input__name {
+.radio__name {
   display: block;
   margin-left: 23px;
   font-family: "Open Sans", sans-serif;
@@ -469,7 +469,7 @@ textarea textarea {
   margin-bottom: 30px;
 }
 .form__btn {
-  min-width: 400px;
+  max-width: 400px;
   width: 100%;
 }
 .form--mb40 {
@@ -705,7 +705,6 @@ textarea textarea {
   min-width: 830px;
 }
 .pp {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
