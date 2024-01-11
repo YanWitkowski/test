@@ -712,6 +712,7 @@ textarea textarea {
   min-width: 830px;
 }
 .pp {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
