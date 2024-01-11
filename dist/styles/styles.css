@@ -212,7 +212,9 @@ textarea textarea {
           flex-direction: column;
 }
 .radio__label {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 9px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -295,10 +297,10 @@ textarea textarea {
   overflow: hidden !important;
   white-space: nowrap !important;
 }
-.check__input:checked ~ .check_mark {
+.check__input:checked ~ .check__mark {
   background-color: #1f1e1e;
 }
-.check__input:checked ~ .check_mark::after {
+.check__input:checked ~ .check__mark::after {
   content: '';
   display: block;
   position: absolute;
@@ -801,7 +803,7 @@ textarea textarea {
   max-width: 870px;
 }
 .body {
-  padding: 0;
+  padding: 147px 0 0;
   margin: 0;
   background-color: #bfbfbf;
   font-family: "Open Sans", sans-serif;
@@ -1551,7 +1553,7 @@ textarea textarea {
 .about {
   padding-bottom: 90px;
 }
-.about__block__container {
+.about__container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -1766,7 +1768,7 @@ textarea textarea {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .about__block__container {
+  .about__container {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -1929,7 +1931,7 @@ textarea textarea {
     padding-left: 20px;
     padding-right: 20px;
   }
-  .about__block__container {
+  .about__container {
     padding-left: 20px;
     padding-right: 20px;
   }
