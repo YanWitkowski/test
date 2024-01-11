@@ -137,6 +137,9 @@ textarea textarea {
   overflow: hidden;
   cursor: pointer;
 }
+.btn--close {
+  border: 0px;
+}
 .btn:active {
   background-color: #1f1e1e;
   color: #ffffff;
