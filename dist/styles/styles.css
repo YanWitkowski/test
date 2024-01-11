@@ -212,6 +212,8 @@ textarea textarea {
           flex-direction: column;
 }
 .radio__label {
+  display: block;
+  margin-bottom: 9px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-left: 23px;
