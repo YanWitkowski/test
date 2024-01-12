@@ -1393,6 +1393,50 @@ textarea textarea {
   max-width: 830px;
   margin-bottom: 80px;
 }
+.main-header {
+  padding: 100px 0;
+}
+.main-header__title,
+.main-header__text {
+  margin: 0 0 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: normal;
+  color: #1f1e1e;
+}
+.main-header__title {
+  margin-top: 70px;
+}
+.main-header__text {
+  margin: 0 auto;
+  max-width: 948px;
+  width: 100%;
+}
+.main-header__picture {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 70px;
+}
+.main-header__picture::before {
+  content: '';
+  display: block;
+  width: 100%;
+}
+.main-header__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
 .page-header {
   position: fixed;
   top: 0;
