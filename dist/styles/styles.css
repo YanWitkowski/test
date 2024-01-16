@@ -90,32 +90,23 @@ input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #6c6c6c;
 }
-input input:focus::-webkit-input-placeholder,
-textarea input:focus::-webkit-input-placeholder,
-input textarea:focus::-webkit-input-placeholder,
-textarea textarea:focus::-webkit-input-placeholder {
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
   color: transparent;
 }
-input input:focus::-moz-placeholder,
-textarea input:focus::-moz-placeholder,
-input textarea:focus::-moz-placeholder,
-textarea textarea:focus::-moz-placeholder {
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
   color: transparent;
 }
-input input:focus:-moz-placeholder,
-textarea input:focus:-moz-placeholder,
-input textarea:focus:-moz-placeholder,
-textarea textarea:focus:-moz-placeholder {
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
   color: transparent;
 }
-input input:focus:-ms-input-placeholder,
-textarea input:focus:-ms-input-placeholder,
-input textarea:focus:-ms-input-placeholder,
-textarea textarea:focus:-ms-input-placeholder {
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
   color: transparent;
 }
-input textarea,
-textarea textarea {
+textarea {
   resize: none;
 }
 .btn {
@@ -488,7 +479,7 @@ textarea textarea {
   max-width: 400px;
   width: 100%;
 }
-.form--mb40 {
+.form__check--mb40 {
   margin-bottom: 40px;
 }
 .contacts-item {
