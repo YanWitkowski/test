@@ -1582,11 +1582,13 @@ textarea {
 }
 .page-footer__border::before {
   margin-right: 50px;
-  background-color: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
+  background: -webkit-gradient(linear, right top, left top, from(#1C1B1B), color-stop(82.86%, rgba(255, 255, 255, 0)));
+  background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
 }
 .page-footer__border::after {
   margin-left: 50px;
-  background-color: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#1C1B1B), to(rgba(255, 255, 255, 0)));
+  background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 100%);
 }
 .page-footer__wrapper {
   display: -webkit-box;
@@ -1616,7 +1618,7 @@ textarea {
   left: 0;
   width: 4px;
   height: 100%;
-  border-color: #bc3324;
+  background-color: #bc3324;
 }
 .page-footer__nav-link {
   display: block;
@@ -1681,6 +1683,9 @@ textarea {
 .about__text--2 {
   grid-area: text;
   margin-left: auto;
+}
+.about__text--mb90 {
+  margin-bottom: 90px;
 }
 .about__picture {
   grid-area: picture1;
@@ -1748,7 +1753,7 @@ textarea {
   left: 0;
   right: 0;
   height: 65%;
-  border-color: #bc3324;
+  background-color: #bc3324;
 }
 .about__picture3::after {
   content: '';
@@ -1767,7 +1772,7 @@ textarea {
      object-fit: contain;
 }
 .about__block3-wrapper {
-  min-width: 344px;
+  max-width: 344px;
 }
 .width_624 {
   -webkit-box-sizing: border-box;
