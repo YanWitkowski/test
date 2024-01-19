@@ -144,6 +144,7 @@
         font-weight: 400;
         line-height: 1.3;
         transition: background-color 0.2s;
+
         &:hover {
             @media (hover:hover) {
                 background-color: @red;
@@ -152,6 +153,20 @@
 
         &:active {
             background-color: @red;
+        }
+
+        &--red_dark {
+            background-color: @red;
+
+            &:hover {
+                @media (hover:hover) {
+                    background-color: @red_dark;
+                }
+            }
+    
+            &:active {
+                background-color: @red_dark;
+            }
         }
     }
 
