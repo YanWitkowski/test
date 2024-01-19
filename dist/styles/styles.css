@@ -129,10 +129,19 @@ textarea {
   cursor: pointer;
 }
 .btn--close {
-  border: 0px;
+  border: 1px;
 }
 .btn:active {
   background-color: #1f1e1e;
+  color: #ffffff;
+}
+.btn--event {
+  border: 1px;
+  background-color: #bc3324;
+  color: #ffffff;
+}
+.btn--event:active {
+  background-color: #a51505;
   color: #ffffff;
 }
 .link {
@@ -152,6 +161,17 @@ textarea {
   color: #1f1e1e;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+}
+.link--1 {
+  padding-top: 40px;
+  margin-left: auto;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+}
+.link--1:active {
+  color: #bc3324;
 }
 .link__arrow-1 {
   padding-top: 89px;
@@ -479,8 +499,66 @@ textarea {
   max-width: 400px;
   width: 100%;
 }
+.form__btn--close {
+  max-width: 150px;
+  margin-left: 93px;
+}
 .form__check--mb40 {
   margin-bottom: 40px;
+}
+.offers__title {
+  width: 90px;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  font-family: "Lora", serif;
+  margin: auto;
+  padding-bottom: 46px;
+}
+.offers__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  max-width: 1414px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.offers__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 106px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 208px;
+}
+.offers__btn1 {
+  grid-area: btn1;
+  display: block;
+  max-width: 280px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.offers__btn1::before {
+  content: '';
+  display: block;
+}
+.offers__btn2 {
+  grid-area: btn2;
+  display: block;
+  max-width: 270px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.offers__btn2::before {
+  content: '';
+  display: block;
 }
 .contacts-item {
   display: -webkit-box;
@@ -1821,6 +1899,10 @@ textarea {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .offers__container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .article__container {
     padding-left: 30px;
     padding-right: 30px;
@@ -1873,6 +1955,10 @@ textarea {
   }
   .breadcrumbs {
     display: none;
+  }
+  .offers__container {
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .article {
     padding: 80px 0 100px;
@@ -2025,6 +2111,13 @@ textarea {
   .btn:hover {
     background-color: #1f1e1e;
     color: #ffffff;
+  }
+  .btn--event:hover {
+    background-color: #a51505;
+    color: #ffffff;
+  }
+  .link--1:hover {
+    color: #bc3324;
   }
   .link:hover {
     color: #bc3324;

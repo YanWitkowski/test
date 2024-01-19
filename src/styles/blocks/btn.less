@@ -16,7 +16,7 @@
     cursor: pointer;
 
     &--close {
-        border: 0px;
+        border: 1px;
     }
 
     &:active {
@@ -30,4 +30,23 @@
             color: @white;
         }
     }
+
+    &--event {
+        border: 1px;
+        background-color: @red;
+        color: @white;
+
+        &:active {
+            background-color: @red_dark;
+            color: @white;
+        }
+    
+        &:hover {
+            @media (hover: hover) {
+                background-color: @red_dark;
+                color: @white;
+            }
+        }
+    }
+
 }

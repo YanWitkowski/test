@@ -1,0 +1,48 @@
+.offers {
+    
+  &__title {
+    width: 90px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    font-family: @font2;
+    margin: auto;
+    padding-bottom: 46px;
+  }
+
+  &__container {
+    .container;
+  }
+
+  &__block {
+    display: flex;
+    gap: 106px;
+    justify-content: center;
+    margin-bottom: 208px;
+}
+
+  &__btn1 {
+    grid-area: btn1;
+    display: block;
+    max-width: 280px;
+    align-items: flex-end;
+
+    &::before {
+      content: '';
+      display: block;
+    }
+  }
+
+  &__btn2 {
+    grid-area: btn2;
+    display: block;
+    max-width: 270px;
+    align-items: flex-start;
+
+    &::before {
+      content: '';
+      display: block;
+    }
+  }
+}
