@@ -1402,6 +1402,10 @@ textarea {
   -ms-flex-item-align: center;
       align-self: center;
 }
+.events__show-more {
+  margin-top: 70px;
+  text-align: center;
+}
 .event {
   padding: 40px 0 150px;
 }
