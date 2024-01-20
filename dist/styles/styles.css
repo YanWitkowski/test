@@ -1047,7 +1047,9 @@ textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -30px -120px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .listing__event-card {
   width: calc(33.3333% - 60px);
@@ -1361,7 +1363,7 @@ textarea {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border-color: #bfbfbf;
+  background-color: #bfbfbf;
 }
 .reserve__note:last-child {
   margin-bottom: 0;
@@ -1376,6 +1378,7 @@ textarea {
   padding-top: 140px 0 100px;
 }
 .events__listing {
+  margin-top: 200px;
   margin-bottom: 100px;
 }
 .events__services {
@@ -1391,7 +1394,7 @@ textarea {
 }
 .events__services-desription {
   max-width: 870px;
-  margin: 0 0 60px;
+  margin: 0 470px 60px 0;
   font-size: 16px;
   line-height: 22px;
 }
