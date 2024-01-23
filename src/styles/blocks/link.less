@@ -22,10 +22,12 @@
                 color: @red;
             }
         }
-    
+
         &:active {
             color: @red;
         }
+
+
     }
 
     &__arrow-1 {
@@ -51,6 +53,24 @@
     }
 
     &__icon {
-        margin-left: 20px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: normal;
+        text-decoration: none;
+        padding-top: 18px;
+        &:hover {
+            @media (hover: hover) {
+                color: @red;
+            }
+        }
+
+        &:active {
+            color: @red;
+        }
+
+        &--pd40-ml {
+            padding-top: 40px;
+            margin-left: auto;
+        }
     }
 }

@@ -186,7 +186,18 @@ textarea {
   padding-top: 89px;
 }
 .link__icon {
-  margin-left: 20px;
+  font-weight: 600;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+  padding-top: 18px;
+}
+.link__icon:active {
+  color: #bc3324;
+}
+.link__icon--pd40-ml {
+  padding-top: 40px;
+  margin-left: auto;
 }
 .title {
   margin: 0 0 80px;
@@ -626,6 +637,12 @@ textarea {
 .event-card__link:active .event-card__title {
   color: #bc3324;
   text-decoration-color: #bc3324;
+}
+.event-card__link--show-more {
+  color: #1f1e1e;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
 }
 .event-card__picture {
   display: block;
@@ -1392,9 +1409,9 @@ textarea {
   padding-right: 40px;
   margin-bottom: 50px;
 }
-.events__services-desription {
+.events__services-description {
   max-width: 870px;
-  margin: 0 470px 60px 0;
+  margin: 0 0 60px 0;
   font-size: 16px;
   line-height: 22px;
 }
@@ -1402,9 +1419,17 @@ textarea {
   -ms-flex-item-align: center;
       align-self: center;
 }
-.events__show-more {
-  margin-top: 70px;
-  text-align: center;
+.events__link_down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .event {
   padding: 40px 0 150px;
@@ -2139,6 +2164,9 @@ textarea {
     color: #bc3324;
   }
   .link:hover {
+    color: #bc3324;
+  }
+  .link__icon:hover {
     color: #bc3324;
   }
   .contacts-item__info[href]:hover {
