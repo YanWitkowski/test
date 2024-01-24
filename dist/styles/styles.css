@@ -109,6 +109,14 @@ textarea:focus:-ms-input-placeholder {
 textarea {
   resize: none;
 }
+.doit__text {
+  color: #1f1e1e;
+  font-family: "mak", serif;
+  font-size: 128px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: right;
+}
 .btn {
   display: inline-block;
   -webkit-box-sizing: border-box;
