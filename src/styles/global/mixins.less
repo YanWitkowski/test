@@ -1,3 +1,11 @@
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear:both;
+  }
+}
+
 .container() {
   box-sizing: border-box;
   width: 100%;
@@ -32,6 +40,120 @@
   }
 }
 
+.show-block {
+  display: block;
+}
+
+.show-flex {
+  display: flex;
+}
+
+.hide-block {
+  display: none;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.is-ios * {
+  cursor: pointer;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+}
+
+.custom-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6C6C6C transparent;
+
+  &::-webkit-scrollbar-track {
+    border-color: transparent;
+    border-radius: 1px;
+  }
+
+  &-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 1px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #6C6C6C;
+  }
+}
+
+.custom-scroll-x {
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #6C6C6C transparent;
+
+  &::-webkit-scrollbar-track {
+    border-color: transparent;
+    border-radius: 1px;
+  }
+
+  &-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 1px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1px;
+    background-color: #6C6C6C;
+  }
+}
+
+.show-nav {
+  body {
+    @media @bw1020 {
+      transform: translateX(0);
+    }
+  }
+
+  .page-header__nav {
+    @media @bw1020 {
+      transform: translateX(0);
+    }
+  }
+
+  .page-header__nav-toggle {
+    &::before {
+      transform: translate(0px, 6px) rotate(45deg);
+      box-shadow: none;
+    }
+    &::after {
+      transform: translate(0px, -6px) rotate(-45deg);
+    }
+  }
+}
+
+.show-event-pp {
+  body {
+    overflow: hidden;
+  }
+
+  #js-eventPP {
+    display: flex;
+  }
+}
+
+.pp-overflow {
+  overflow: hidden;
+}
 .is-hidden {
   position: absolute !important;
   width: 0 !important;
@@ -45,12 +167,3 @@
   white-space: nowrap !important;
 }
 
-.show-event-pp {
-  body {
-    overflow: hidden;
-  }
-
-  #eventPP {
-    display: flex;
-  }
-}

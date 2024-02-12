@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script defer src="scripts/dev/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+        const swiper = new Swiper(...)
+    </script>
 </head>
 
 <body class="body">
@@ -18,15 +27,37 @@
         <svg class="page-header__logo-img" width="202" height="147">
           <use xlink:href="assets/icons/symbols.svg#logo">
         </svg>
-        <class="page-header__logo-img" />
       </a>
-      <nav class="page-header__nav-link">
+      <nav class="page-header__nav">
         <a href="#" class="page-header__nav-link">Мероприятия</a>
         <a href="#" class="page-header__nav-link">Блог</a>
         <a href="#" class="page-header__nav-link">О нас</a>
         <a href="#" class="page-header__nav-link">Контакты</a>
+
+        <div class="page-header__nav-user">
+          <a href="#" class="page-header__nav-user-link">
+            Ян В.
+          </a>
+
+          <a href="#" class="page-header__nav-logout">
+            <svg class="page-header__nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door">
+
+              </use>
+            </svg>
+          </a>
+        </div>
       </nav>
-      <a href="#" class="btn page-header__user-btn">Войти</a>
+
+      <div class="page-header__right-block">
+        <a href="#" class="btn page-header__user-btn">
+          Войти
+          <svg class="page-header__user-icon" width="21" height="18">
+            <use xlink:href="assets/icons/symbols.svg#user"></use>
+          </svg>
+        </a>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
+      </div>
     </div>
 
   </header>
@@ -54,7 +85,7 @@
 
               <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
 
-              <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
+              <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийныйматериал.</p>
 
               <time datetime="2022-12-07T18:00" class="event-card__time">07.12.2022</time>
             </a>
@@ -102,7 +133,7 @@
 
               <h4 class="event-card__title">Выставка Малевича в Томске</h4>
 
-              <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
+              <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче.Экспозиция займёт два этажа павильона.</p>
 
               <time datetime="2022-12-23T20:00" class="event-card__time">23.12.2022</time>
             </a>
@@ -274,10 +305,10 @@
         Я ХОЧУ:
       </p>
       <div class="offers__block">
-        <button type="event" class="offers__btn1 btn btn--red">
+        <button type="button" class="offers__btn1 btn btn--red" id="js-eventOpenBtn">
           Провести мероприятие
         </button>
-        <button type="event" class="offers__btn2 btn">
+        <button type="button" class="offers__btn2 btn">
           Стать арендатором
         </button>
       </div>
@@ -364,10 +395,10 @@
 
   </footer>
 
-  <div class="pp">
+  <div class="pp" id="js-eventPP">
     <div class="pp__container">
       <div class="pp__sticky-close">
-        <button type="button" class="pp__sticky-btn">
+        <button type="button" class="pp__sticky-btn js-ppCloseBtn">
           <svg class="pp__btn-icon" width="24" height="24">
             <use xlink:href="assets/icons/symbols.svg#x"></use>
           </svg>
@@ -484,7 +515,7 @@
               <button type="submit" class="form__btn btn">
                 Отправить
               </button>
-              <button type="close" class="form__btn--close btn--close btn">
+              <button type="close" class="form__btn--close btn--close btn js-ppCloseBtn">
                 Закрыть
               </button>
             </div>
