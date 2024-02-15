@@ -58,6 +58,7 @@
         line-height: normal;
         text-decoration: none;
         padding-top: 18px;
+
         &:hover {
             @media (hover: hover) {
                 color: @red;
@@ -71,6 +72,15 @@
         &--pd40-ml {
             padding-top: 40px;
             margin-left: auto;
+        }
+
+        &--arrow {
+            padding-top: 0;
+        }
+
+        &--arrow-left {
+            transform: rotate(180deg);
+            padding-top: 0;
         }
     }
 }

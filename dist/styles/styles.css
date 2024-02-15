@@ -1085,6 +1085,15 @@ button.swiper-pagination-bullet {
   padding-top: 40px;
   margin-left: auto;
 }
+.link__icon--arrow {
+  padding-top: 0;
+}
+.link__icon--arrow-left {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  padding-top: 0;
+}
 .title {
   margin: 0 0 80px;
   font-family: "Lora", serif;
