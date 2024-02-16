@@ -1,5 +1,8 @@
 <section class="upcoming @@class">
     <div class="upcoming__wrapper">
+        <!-- <svg class="upcoming__wrapper">
+            <use xlink:href="assets/icons/symbols.svg#rectangle">
+        </svg> -->
         <div class="upcoming__container">
             <h2 class="upcoming__title section-title">Мероприятия</h2>
             <div class="upcoming__swiper swiper swiper--3s js-swiper">
@@ -7,7 +10,7 @@
                     <div class="swiper-slide">
                         <!-- prettier-ignore -->
                         @@include('event-card.html', {
-                        "class": "listing__event-card",
+                        "class": "swiper-card",
                         "img": "assets/images/nirvana.jpg",
                         "img_tablet": "assets/images/nirvana_tablet.jpg",
                         "img_webp": "assets/images/nirvana.webp",
@@ -22,7 +25,7 @@
                     <div class="swiper-slide">
                         <!-- prettier-ignore -->
                         @@include('event-card.html', {
-                        "class": "listing__event-card",
+                        "class": "swiper-card",
                         "img": "assets/images/stuff.jpg",
                         "img_tablet": "assets/images/stuff_tablet.jpg",
                         "img_webp": "assets/images/stuff.webp",
@@ -37,7 +40,7 @@
                     <div class="swiper-slide">
                         <!-- prettier-ignore -->
                         @@include('event-card.html', {
-                        "class": "listing__event-card",
+                        "class": "swiper-card",
                         "img": "assets/images/sade.jpg",
                         "img_tablet": "assets/images/sade_tablet.jpg",
                         "img_webp": "assets/images/sade.webp",
@@ -52,7 +55,7 @@
                     <div class="swiper-slide">
                         <!-- prettier-ignore -->
                         @@include('event-card.html', {
-                        "class": "listing__event-card",
+                        "class": "swiper-card",
                         "img": "assets/images/malevich.jpg",
                         "img_tablet": "assets/images/malevich_tablet.jpg",
                         "img_webp": "assets/images/malevich.webp",
@@ -67,7 +70,7 @@
                     <div class="swiper-slide">
                         <!-- prettier-ignore -->
                         @@include('event-card.html', {
-                        "class": "listing__event-card",
+                        "class": "swiper-card",
                         "img": "assets/images/tatler.jpg",
                         "img_tablet": "assets/images/tatler_tablet.jpg",
                         "img_webp": "assets/images/tatler.webp",
@@ -82,7 +85,7 @@
                     <div class="swiper-slide">
                         <!-- prettier-ignore -->
                         @@include('event-card.html', {
-                        "class": "listing__event-card",
+                        "class": "swiper-card",
                         "img": "assets/images/hatters.jpg",
                         "img_tablet": "assets/images/hatters_tablet.jpg",
                         "img_webp": "assets/images/hatters.webp",
@@ -109,7 +112,11 @@
                     </button>
                 </footer>
             </div>
-            <a href="#" class="upcoming__link link">Смотреть все</a>
+            <a href="#" class="upcoming__link link">
+                <span class="upcoming__link">
+                    Смотреть все
+                </span>
+            </a>
         </div>
     </div>
 </section>

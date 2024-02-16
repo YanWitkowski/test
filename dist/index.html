@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script defer src="scripts/main.js"></script>
+  <script defer src="scripts/main.min.js"></script>
 </head>
 
 <body class="body">
@@ -121,7 +121,7 @@
             <picture class="about__picture3">
               <img class="about__img2" src="assets/images/about3.jpg" />
             </picture>
-            <div class="about__block3-wrapper">
+            <div class="about__block3-wrapper about__block3-wrapper--mb114">
               <p ckass="about__text about__text--mb90">
                 Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.
               </p>
@@ -141,13 +141,16 @@
 
       <section class="upcoming home__upcoming">
         <div class="upcoming__wrapper">
+          <!-- <svg class="upcoming__wrapper">
+            <use xlink:href="assets/icons/symbols.svg#rectangle">
+        </svg> -->
           <div class="upcoming__container">
             <h2 class="upcoming__title section-title">Мероприятия</h2>
             <div class="upcoming__swiper swiper swiper--3s js-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card  listing__event-card">
+                  <article class="event-card  swiper-card">
                     <a href="#" class="event-card__link">
                       <picture class="event-card__picture">
                         <source type="image/webp" srcset="assets/images/nirvana.webp" />
@@ -167,7 +170,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card  listing__event-card">
+                  <article class="event-card  swiper-card">
                     <a href="#" class="event-card__link">
                       <picture class="event-card__picture">
                         <source type="image/webp" srcset="assets/images/stuff.webp" />
@@ -187,7 +190,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card  listing__event-card">
+                  <article class="event-card  swiper-card">
                     <a href="#" class="event-card__link">
                       <picture class="event-card__picture">
                         <source type="image/webp" srcset="assets/images/sade.webp" />
@@ -207,7 +210,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card  listing__event-card">
+                  <article class="event-card  swiper-card">
                     <a href="#" class="event-card__link">
                       <picture class="event-card__picture">
                         <source type="image/webp" srcset="assets/images/malevich.webp" />
@@ -227,7 +230,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card  listing__event-card">
+                  <article class="event-card  swiper-card">
                     <a href="#" class="event-card__link">
                       <picture class="event-card__picture">
                         <source type="image/webp" srcset="assets/images/tatler.webp" />
@@ -247,7 +250,7 @@
                 </div>
                 <div class="swiper-slide">
                   <!-- prettier-ignore -->
-                  <article class="event-card  listing__event-card">
+                  <article class="event-card  swiper-card">
                     <a href="#" class="event-card__link">
                       <picture class="event-card__picture">
                         <source type="image/webp" srcset="assets/images/hatters.webp" />
@@ -280,7 +283,11 @@
                 </button>
               </footer>
             </div>
-            <a href="#" class="upcoming__link link">Смотреть все</a>
+            <a href="#" class="upcoming__link link">
+              <span class="upcoming__link">
+                Смотреть все
+              </span>
+            </a>
           </div>
         </div>
       </section>

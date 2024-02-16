@@ -3,7 +3,7 @@
 
     const root = document.documentElement;
 
-    const navToggle = document.querySelector("js-navToggle");
+    const navToggle = document.querySelector("#js-navToggle");
     navToggle.addEventListener("click", function () {
         root.classList.toggle("show-nav");
     });
@@ -17,7 +17,7 @@
                 document.removeEventListener("keyup", closeEventPP);
                 eventPP.removeEventListener("click", closeEventPP);
 
-                root.classList.remove("show-event-popup")
+                root.classList.remove("show-event-pp")
             }
 
             switch (event.type) {
@@ -35,7 +35,7 @@
         };
 
         eventOpenBtn.addEventListener("click", function () {
-            root.classList.add("show-event-popup");
+            root.classList.add("show-event-pp");
 
             document.addEventListener("keyup", closeEventPP);
             eventPP.addEventListener("click", closeEventPP);
