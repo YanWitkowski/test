@@ -41,6 +41,7 @@
         display: flex;
         flex-direction: column;
         gap: 22px;
+
         &::before {
             content: '';
             position: absolute;
@@ -59,13 +60,61 @@
         font-weight: 600;
         color: @black;
         transition: color 0.2s;
+
         &:hover {
             @media (hover:hover) {
                 color: @red;
             }
-             &:active {
+
+            &:active {
                 color: @red;
             }
         }
+    }
+
+    &__millennials {
+        color: @black;
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -64px;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    &__end {
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        color: @black;
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+
+
+        &--1 {
+            display: flex;
+            justify-content: flex-start;
+            gap: 60px;
+        }
+
+        &--2 {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+    }
+
+
+    &__end-link {
+        text-decoration: none;
+    }
+
+    &__tagree {
+        padding-top: 4px;
     }
 }
