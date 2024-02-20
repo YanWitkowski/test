@@ -973,12 +973,8 @@ button.swiper-pagination-bullet {
 .swiper-pagination-bullet {
   width: 15px;
   height: 2px;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-radius: 2px;
+  border: 2px solid;
   background-color: #bfbfbf;
-  background-clip: padding-box;
-  opacity: 1;
 }
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #1f1e1e;
@@ -1753,16 +1749,22 @@ button.swiper-pagination-bullet {
   margin-left: auto;
   margin-right: auto;
 }
-.nav__nav {
-  display: block;
-}
-.swiper-slide {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.nav__list {
+  top: 0;
+  left: 0;
+  position: absolute;
+  display: grid;
+  gap: 12px;
+  padding: 42px 0;
+  margin: 0;
+  background: transparent;
+  list-style-type: none;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  width: 200px;
 }
 .pp {
   display: none;
@@ -2751,6 +2753,14 @@ button.swiper-pagination-bullet {
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
+.page-header__nav-link--menu {
+  display: block;
+  padding: 8px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+}
 .page-header__nav-user {
   display: none;
 }
@@ -3122,6 +3132,9 @@ button.swiper-pagination-bullet {
 .custom-scroll-x::-webkit-scrollbar-thumb {
   border-radius: 1px;
   background-color: #6C6C6C;
+}
+.show-nav .page-header__nav {
+  display: none;
 }
 .show-nav .page-header__nav-toggle::before {
   -webkit-transform: translate(0px, 6px) rotate(45deg);
