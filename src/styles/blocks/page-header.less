@@ -222,6 +222,19 @@
         @media @bw1020 {
             display: block;
             margin: auto;
+
+            transition: color 0.2s;
+
+            &:hover {
+                @media (hover: hover) {
+                    color: @red_dark;
+                }
+            }
+            
+            &:active {
+                color: @red_dark;
+            }
+    
         }
     }
 
