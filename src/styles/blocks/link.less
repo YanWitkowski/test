@@ -30,6 +30,7 @@
 
     }
 
+
     &__arrow-1 {
         padding-top: 166px;
     }
@@ -77,11 +78,19 @@
 
         &--arrow {
             padding-top: 0;
+
+            @media @bw500 {
+                padding-top: 100px;
+            }
         }
 
         &--arrow-left {
             transform: rotate(180deg);
             padding-top: 0;
+
+            @media @bw500 {
+                padding-bottom: 100px;
+            }
         }
     }
 }

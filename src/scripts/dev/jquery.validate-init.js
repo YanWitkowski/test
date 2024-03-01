@@ -46,6 +46,7 @@
       errorElement: "span"
     });
   }
+
        
   const subscribeForm = $("#js-subscribeForm");
   if (subscribeForm.length) {

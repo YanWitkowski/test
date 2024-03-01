@@ -1,4 +1,4 @@
-.swiper-slide {
+.swiper-wrapper .swiper-slide {
   height: auto;
   display: flex;
 }
@@ -7,6 +7,7 @@
   width: 100%;
 
   .swiper-slide {
+    display: flex;
     box-sizing: border-box;
     width: calc(33.3333% + 20px);
     min-width: 340px;
@@ -65,6 +66,7 @@
 
       &__title {
         cursor: pointer;
+        
       }
     }
   }
@@ -83,7 +85,7 @@
   // border: 2px solid;
   // background-color: @gray_dark;
   @media @bw1340 {
-    width: 300px;
+    justify-content: center;
   }
 
   @media @bw768 {

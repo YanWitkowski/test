@@ -1,6 +1,7 @@
 .swiper-card {
     display: flex;
     width: 405px;
+    height: auto;
     color: @black;
 
     &__link {
@@ -52,10 +53,19 @@
         font-size: 24px;
         font-weight: 700;
         margin: -1px;
+        min-height: 66px;
+
 
         &--2 {
             padding-bottom: 33px;
         }
+    }
+    &__description {
+        margin-bottom: auto;
+    }
+
+    &__time {
+        margin-top: 10px;
     }
 }
 
