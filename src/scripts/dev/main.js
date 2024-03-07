@@ -313,6 +313,7 @@
 
       const dateConfig = {
         autoClose: true,
+        container: ".field__date",
         minDate: new Date(),
         navTitles: {
           days: "MMMM <i>yyyy</i>"
