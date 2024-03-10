@@ -2617,6 +2617,11 @@ button.swiper-pagination-bullet {
   padding-left: 40px;
   display: block;
 }
+.check span.error {
+  font-size: 14px;
+  padding-top: 17px;
+  position: absolute;
+}
 .check--red {
   color: #bc3324;
 }
@@ -2678,8 +2683,10 @@ button.swiper-pagination-bullet {
 }
 .field label.error,
 .field span.error {
+  font-size: 14px;
   display: block;
   margin: 5px 0 0;
+  color: #a51505;
 }
 .field__title {
   margin: 0 0 10px;
@@ -2737,7 +2744,7 @@ button.swiper-pagination-bullet {
           flex-grow: 1;
   margin-right: 0;
 }
-.field__date-input__date-picker {
+.field__date-picker {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
