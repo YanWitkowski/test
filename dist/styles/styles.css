@@ -2924,29 +2924,27 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 106px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 100px;
 }
 .offers__btn1 {
-  grid-area: btn1;
-  display: block;
-  max-width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 106px;
 }
-.offers__btn1::before {
-  content: '';
-  display: block;
+.offers__btn1:last-child {
+  margin-right: 0;
 }
 .offers__btn2 {
-  grid-area: btn2;
-  display: block;
-  max-width: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-.offers__btn2::before {
-  content: '';
-  display: block;
+.offers__btn2:last-child {
+  margin-right: 0;
 }
 .svg-contacts {
   display: -webkit-box;
@@ -5018,6 +5016,9 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .offers__btn1 {
+    margin-right: 56px;
+  }
   .upcoming__container {
     padding-left: 20px;
     padding-right: 20px;
@@ -5194,6 +5195,33 @@ button.swiper-pagination-bullet {
   .about__container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+}
+@media (max-width: 599px) {
+  .offers__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .offers__btn1 {
+    margin: 0;
+    height: 49px;
+    width: 280px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .offers__btn2 {
+    height: 49px;
+    width: 280px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media (max-width: 499px) {
