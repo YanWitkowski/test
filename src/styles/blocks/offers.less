@@ -35,7 +35,7 @@
     margin-bottom: 100px;
 
     @media @bw600 {
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 25px;
       align-items: center;
     }
@@ -44,6 +44,8 @@
   &__btn1 {
     display: flex;
     margin-right: 106px;
+
+    max-height: 272px;
 
     &:last-child {
       margin-right: 0;
@@ -55,21 +57,28 @@
 
     @media @bw600 {
       margin: 0;
-      height: 49px;
+      //height: 49px;
       width: 280px;
       justify-content: center;
+    }
+
+    @media @bw320 {
+      font-size: 14px;
+      line-height: 19px;
     }
   }
 
   &__btn2 {
     display: flex;
 
+    max-height: 246px;
+
     &:last-child {
       margin-right: 0;
     }
 
     @media @bw600 {
-      height: 49px;
+      //height: 49px;
       width: 280px;
       justify-content: center;
     }

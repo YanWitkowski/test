@@ -15,6 +15,11 @@
     overflow: hidden;
     cursor: pointer;
 
+    @media @bw320 {
+        font-size: 14px;
+        line-height: 19px;
+    }
+
     &--close {
         border: 1px;
     }
@@ -40,7 +45,7 @@
             background-color: @red_dark;
             color: @white;
         }
-    
+
         &:hover {
             @media (hover: hover) {
                 background-color: @red_dark;

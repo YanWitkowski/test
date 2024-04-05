@@ -140,7 +140,7 @@
             О нас
           </h2>
           <div class="about__block">
-            <h3 class="about__title">Проект "Millenials" </h3>
+            <h3 class="about__title about__title--mb30">Проект "Millenials" </h3>
             <p class="about__text">
               Вдохновлён молодыми идейными людьми, увлечёнными творчеством, эмоциями и желанием сделать мир лучше,
               проявить
@@ -154,7 +154,7 @@
             <picture class="about__picture2">
               <img class="about__img" src="assets/images/about2.jpg" />
             </picture>
-            <h3 class="about__title about__title--w868 about__title--2">
+            <h3 class="about__title about__title--w868 about__title--2 about__title--mt">
               Мы предоставляем площади для вашего мероприятия
             </h3>
             <p class="about__text about__text--2">
@@ -168,11 +168,11 @@
             <picture class="about__picture3">
               <img class="about__img2" src="assets/images/about3.jpg" />
             </picture>
-            <div class="about__block3-wrapper about__block3-wrapper--mb114">
-              <p ckass="about__text about__text--mb90">
+            <div class="about__block3-wrapper">
+              <p class="about__text--3">
                 Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.
               </p>
-              <a href="#" class="about__link link">
+              <a href="#" class="about__link-wrapper about__link link">
                 <span class="link__name">
                   Смотреть
                 </span>
@@ -328,11 +328,7 @@
                 </button>
               </footer>
             </div>
-            <a href="#" class="upcoming__link link">
-              <span class="upcoming__link">
-                Смотреть все
-              </span>
-            </a>
+            <a href="#" class="upcoming__link link">Смотреть все</a>
           </div>
         </div>
       </section>
@@ -354,12 +350,12 @@
 
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Фотосессия в стенах Театра драмы</h4>
+              </a>
 
-                <div class="article-card__link link">
-                  <svg class="link__arrow-2" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#link"></use>
-                  </svg>
-                </div>
+              <a href="#" class="article-card__link link">
+                <svg class="link__arrow-2" width="92" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
               </a>
 
               <p class="article-card__description">Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите, как это было.</p>
@@ -377,12 +373,12 @@
 
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Выставка VR в Томске</h4>
+              </a>
 
-                <div class="article-card__link link">
-                  <svg class="link__arrow-2" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#link"></use>
-                  </svg>
-                </div>
+              <a href="#" class="article-card__link link">
+                <svg class="link__arrow-2" width="92" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
               </a>
 
               <p class="article-card__description">Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.</p>
@@ -400,12 +396,12 @@
 
               <a href="#" class="article-card__title-link">
                 <h4 class="article-card__title">Rocking Radio в заброшенном ангаре</h4>
+              </a>
 
-                <div class="article-card__link link">
-                  <svg class="link__arrow-2" width="92" height="62">
-                    <use xlink:href="assets/icons/symbols.svg#link"></use>
-                  </svg>
-                </div>
+              <a href="#" class="article-card__link link">
+                <svg class="link__arrow-2" width="92" height="62">
+                  <use xlink:href="assets/icons/symbols.svg#link"></use>
+                </svg>
               </a>
 
               <p class="article-card__description">15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.</p>
@@ -497,7 +493,10 @@
               Подпишись и будь в курсе происходящего
             </h4>
             <div class="subscribe__wrapper">
-              <input type="email" name="email" placeholder="Email" class="subscribe__input" required />
+              <!-- <input type="email" name="email" placeholder="Email" class="subscribe__input error" required aria-describedby="email-error" aria-invalid="true">
+                        <span id="email-error" class="error">Это поле обязательно</span> -->
+              <input type="email" name="email" placeholder="Email" class="subscribe__input error" required aria-describedby="email-error" aria-invalid="true">
+              <!-- <span id="email-error" class="error">Это поле обязательно</span> -->
               <button type="submit" class="subscribe__submit">Подписаться</button>
             </div>
             <label class="subscribe__check check field">
@@ -513,16 +512,16 @@
 
 
       <div class="svg-contacts">
-        <div class="svg-contacts__img">
+        <a href="" class="svg-contacts__img">
           <svg class="svg-contacts__icon" width="24" height="24">
             <use xlink:href="assets/icons/symbols.svg#insta"></use>
           </svg>
-        </div>
-        <div class="svg-contacts__img">
+        </a>
+        <a href="" class="svg-contacts__img">
           <svg class="svg-contacts__icon" width="24" height="24">
             <use xlink:href="assets/icons/symbols.svg#la_vk"></use>
           </svg>
-        </div>
+        </a>
       </div>
 
       <p class="page-footer__millennials">© Millennials 2022</p>
@@ -536,10 +535,9 @@
         </div>
         <div class="page-footer__end--2">
           <a href="" class="page-footer__nav-link">Создание и продвижение</a>
-          <a href="" class="page-footer__nav-link">
-            <svg class="page-footer__tagree" width="56" height="17">
-              <use xlink:href="assets/icons/symbols.svg#tagree"></use>
-            </svg>
+          <svg class="page-footer__tagree" width="56" height="17">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
           </a>
 
         </div>
