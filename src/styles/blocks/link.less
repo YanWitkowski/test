@@ -9,6 +9,12 @@
     color: @black;
     transition: color 0.2s;
 
+    &--show-more {
+        @media @bw500 {
+            font-size: 14px;
+        }
+    }
+
     &--1 {
         padding-top: 40px;
         margin-left: auto;
@@ -37,6 +43,8 @@
 
     &__arrow-2 {
         padding-left: 717px;
+
+
     }
 
     &:hover {
@@ -79,20 +87,16 @@
         &--arrow {
             padding-top: 0;
             background-color: transparent;
-
-            @media @bw500 {
-                padding-top: 100px;
-            }
         }
 
         &--arrow-left {
             transform: rotate(180deg);
-            padding-top: 0;
-            background-color: transparent;
+            // padding-top: 0;
+            // background-color: transparent;
 
-            @media @bw500 {
-                padding-bottom: 100px;
-            }
+            // @media @bw500 {
+            //     padding-bottom: 100px;
+            // }
         }
     }
 }
