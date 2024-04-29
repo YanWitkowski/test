@@ -6,10 +6,18 @@
         margin-bottom: 46px;
 
         @media @bw1340 {
-            margin-top: 71px;
+            height: 1170px;
+            margin-bottom: 71px;
+        }
+
+        @media @bw768 {
+            height: 1040px;
+            margin-bottom: 71px;
         }
 
         @media @bw320{
+            height: 970px;
+            margin-bottom: 41px;
             margin-top: 41px;
         }
 
@@ -18,6 +26,18 @@
     &__container {
         .container();
         padding-top: 110px;
+
+        @media @bw1340 {
+            padding-top: 108px;
+        }
+
+        @media @bw768 {
+            padding-top: 90px;
+        }
+
+        @media @bw320{
+            padding-top: 51px;
+        }
     }
 
     &__link {
@@ -28,5 +48,4 @@
             margin-top: 33px;
         }
     }
-
 }

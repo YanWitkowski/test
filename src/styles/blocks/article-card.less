@@ -5,6 +5,10 @@
     flex-direction: row;
     width: 100%;
 
+    @media @bw960 {
+        flex-direction: column;  
+    }
+
     &:hover {
         .article-card__picture {
             box-shadow: 0 0 30px fade(@black, 55%);
@@ -19,6 +23,12 @@
         margin-right: 60px;
         font-size: 0;
         text-decoration: none;
+
+        @media @bw960 {
+            display: flex;
+            width: 100%;
+            margin: 0;
+        }
     }
 
     &:hover {
@@ -63,8 +73,11 @@
         width: 100%;
         padding-top: 30px;
         padding-bottom: 30px;
-        padding: 30px 0;
-        padding-right: 150px;
+        padding: 26px 0 80px;
+
+        @media @bw400 {
+            padding: 10px 0 80px;
+        }
     }
 
     &__time {
@@ -72,11 +85,20 @@
         font-weight: 300;
         font-size: 16px;
         line-height: 22px;
+
+        @media @bw400 {
+            margin: 0 0 20px;
+        }
     }
 
     &__title-link,
     &__description {
         max-width: 470px;
+
+        @media @bw400 {
+            min-width: auto;
+            padding: 0;
+        }
     }
 
     &__title-link {
@@ -88,6 +110,14 @@
         &:hover {
             color: @red;
             text-decoration-color: @red;
+        }
+
+        @media @bw768 {
+            margin: auto 0 20px;
+        }
+
+        @media @bw320 {
+            margin: auto 0 10px;
         }
     }
 
@@ -103,6 +133,18 @@
         margin: 0;
         font-size: 16px;
         line-height: 22px;
+
+        padding-right: 150px;
+        min-width: 350px;
+
+        @media @bw960 {
+            min-width: 536px;
+            padding-right: 0;
+        }
+
+        @media @bw600 {
+            min-width: auto;
+        }
     }
 
     &__arrow {
@@ -115,6 +157,10 @@
 
     &+.article-card {
         margin-top: 120px;
+
+        @media @bw500 {
+            margin-top: 80px
+        }
 
         &::before {
             content: "";
@@ -129,6 +175,10 @@
             height: 1px;
             background-color: @black;
             pointer-events: none;
+
+            @media @bw500 {
+                margin: 0 auto 40px;
+            }
         }
     }
 

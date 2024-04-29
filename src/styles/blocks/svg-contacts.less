@@ -2,11 +2,23 @@
     display: flex;
     justify-content: center;
     gap: 44px;
-    margin-top: 60px;
+    margin-top: 64px;
+
+    // position: absolute;
+    // left: 50%;
+    // transform: translateX(-50%);
 
     @media @bw1340 {
         margin-top: 62px;
 
+    }
+
+    @media @bw960 {
+        margin-top: 60px;
+    }
+
+    @media @bw450 {
+        gap: 30px;
     }
 
     &__img {
