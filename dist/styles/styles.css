@@ -4172,12 +4172,26 @@ button.swiper-pagination-bullet {
 }
 .event__picture {
   display: block;
-  width: 497px;
   margin: 0 50px;
 }
 .event__image {
   display: block;
   width: 100%;
+}
+.event__title {
+  font-size: 18px;
+  line-height: 25px;
+}
+.event__title--1 {
+  margin-bottom: 21px;
+}
+.event__title--2 {
+  margin-top: 34px;
+  margin-bottom: 15px;
+}
+.event__text {
+  font-size: 16px;
+  line-height: 32px;
 }
 .event__content {
   max-width: 830px;
@@ -4919,6 +4933,9 @@ button.swiper-pagination-bullet {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .breadcrumbs {
+    margin-top: 76px;
+  }
   .offers__container {
     padding-left: 30px;
     padding-right: 30px;
@@ -5283,6 +5300,7 @@ button.swiper-pagination-bullet {
     padding-right: 20px;
   }
   .breadcrumbs {
+    margin-top: 40px;
     display: none;
   }
   .offers__title {
@@ -5451,6 +5469,22 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .reserve {
+    grid-template-columns: 260px calc(118% - 456px);
+    grid-template-areas: "scheme scheme" "checks legend" "checks order";
+  }
+  .reserve__section-title {
+    margin-bottom: 22px;
+  }
+  .reserve__scene {
+    width: 628px;
+    height: 322px;
+    min-width: 280px;
+    min-height: 144px;
+  }
+  .reserve__submit {
+    padding: 15px 112px;
+  }
   .info__container {
     padding-left: 20px;
     padding-right: 20px;
@@ -5476,9 +5510,27 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .event__header {
+    margin-bottom: 76px;
+  }
   .event__about {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .event__time[datetime]::after {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .event__time {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .event__info-text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .event__title--2 {
+    margin-top: 14px;
   }
   .main-header__title,
   .main-header__text {
@@ -5689,6 +5741,9 @@ button.swiper-pagination-bullet {
     margin-top: 90px;
     gap: 40px 0px;
   }
+  .event__header {
+    margin-bottom: 40px;
+  }
   .about__picture2 {
     margin-left: 120px;
   }
@@ -5723,6 +5778,9 @@ button.swiper-pagination-bullet {
   .listing__event-card {
     width: calc(127.3333% - 60px);
     margin: 0 0 60px;
+  }
+  .reserve {
+    grid-template-areas: "scheme" "legend" "checks" "order";
   }
   .page-footer__border::before {
     margin-right: 20px;
@@ -5843,6 +5901,14 @@ button.swiper-pagination-bullet {
   }
   .events__listing {
     margin-top: 80px;
+  }
+  .event__title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .event__text {
+    font-size: 14px;
+    line-height: 28px;
   }
 }
 @media (max-width: 319px) {

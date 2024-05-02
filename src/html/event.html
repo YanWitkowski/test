@@ -25,9 +25,9 @@
                     </div>
 
                     <picture class="event__picture">
-                        <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/sade_mobile.webp" />
+                        <source media="(max-width: 1169px)" type="image/webp" srcset="assets/images/sade_tablet.webp" />
 
-                        <source media="(max-width: 1169px)" srcset="assets/images/sade_mobile.jpg" />
+                        <source media="(max-width: 1169px)" srcset="assets/images/sade_tablet.jpg" />
 
                         <source type="image/webp" srcset="assets/images/sade.webp" />
 
@@ -35,7 +35,7 @@
                     </picture>
 
                     <div class="event__info">
-                        <span class="event__time" data-caption="начало">
+                        <span class="event__time" datetime data-caption="начало">
                             20:00
                         </span>
 
@@ -48,9 +48,9 @@
 
             <div class="event__container">
                 <div class="event__content content">
-                    <h5>Программа мероприятия:</h5>
+                    <h5 class="event__title event__title--1">Программа мероприятия:</h5>
 
-                    <ul>
+                    <ul class="event__text">
                         <li>20:15 — Приветствие гостей</li>
                         <li>20:30 — Первая подача блюд | Салаты</li>
                         <li>20:40 — Живой вокал | Композиции 1-3</li>
@@ -62,13 +62,13 @@
                     </ul>
 
                     <br />
-                    <h5>The Best of Sade</h5>
-                    <p>
+                    <h5 class="event__title event__title--2">The Best of Sade</h5>
+                    <p class="event__text">
                         Первый альбом-компиляция Sade, выпущенный в 1994 году. Он содержит 9 треков, включая самые
                         популярные хиты группы, раритеты и их любимые треки.
                     </p>
 
-                    <p>
+                    <p class="event__text">
                         Группа продемонстрировала необычайное долголетие и креативность своей творческой карьеры. Она
                         лидировала музыкальных чартах с 1994 по 1995 год, став четырехкратно платиновой в США и продав
                         более 2 миллионов копий в Европе.
@@ -76,7 +76,7 @@
 
                     <br />
 
-                    <ol>
+                    <ol class="event__text">
                         <li>Your Love Is King</li>
                         <li>Hang On To Your Love</li>
                         <li>Smooth Operator</li>
@@ -100,31 +100,31 @@
     @@include('blocks/event-pp.html')
 
     <script src="scripts/jquery.validate.min.js"></script>
-  <script src="scripts/jquery.validate-init.js"></script>
-  <script src="scripts/toastr.min.js"></script>
-  <script type="text/javascript">
-      Command: toastr["success"]("Вы все сделали правильно", "Успех")
+    <script src="scripts/jquery.validate-init.js"></script>
+    <script src="scripts/toastr.min.js"></script>
+    <script type="text/javascript">
+        Command: toastr["success"]("Вы все сделали правильно", "Успех")
 
-      toastr.options = {
-          "closeButton": false,
-          "debug": false,
-          "newestOnTop": false,
-          "progressBar": false,
-          "positionClass": "toast-top-right",
-          "preventDuplicates": false,
-          "onclick": null,
-          "showDuration": "300",
-          "hideDuration": "1000",
-          "timeOut": "5000",
-          "extendedTimeOut": "1000",
-          "showEasing": "swing",
-          "hideEasing": "linear",
-          "showMethod": "fadeIn",
-          "hideMethod": "fadeOut"
-      }
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
 
-  </script>
-  <script src="scripts/main.min.js"></script>
+    </script>
+    <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

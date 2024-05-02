@@ -7,6 +7,22 @@
         "order legend";
     width: 100%;
 
+    @media @bw768 {
+        grid-template-columns: 260px calc(118% - 456px);
+        grid-template-areas:
+        "scheme scheme"
+        "checks legend"
+        "checks order";
+    }
+
+    @media @bw500 {
+        grid-template-areas:
+        "scheme"
+        "legend"
+        "checks"
+        "order";
+    }
+
     &__checks {
         grid-area: checks;
         display: flex;
@@ -41,6 +57,10 @@
 
         &--mb30 {
             margin-bottom: 30px;
+        }
+
+        @media @bw768 {
+            margin-bottom: 22px;
         }
     }
 
@@ -88,6 +108,13 @@
         left: 0;
         width: 100%;
         height: 100%;
+
+        @media @bw768 {
+            width: 628px;
+            height: 322px;
+            min-width: 280px;
+            min-height: 144px;
+        }
     }
 
     &__tickets {
@@ -167,6 +194,10 @@
             &:active {
                 background-color: @red_dark;
             }
+        }
+
+        @media @bw768 {
+            padding: 15px 112px;
         }
     }
 

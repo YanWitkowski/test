@@ -8,6 +8,14 @@
     &__header {
         .container;
         margin-bottom: 80px;
+
+        @media @bw768 {
+            margin-bottom: 76px;
+        }
+
+        @media @bw600 {
+            margin-bottom: 40px;
+        }
     }
 
     &__about {
@@ -17,6 +25,7 @@
 
         @media @bw768 {
             flex-wrap: wrap;
+            //display: grid;
         }
     }
 
@@ -68,6 +77,11 @@
                         rgba(255, 255, 255, 0) 82.86%);
             }
         }
+
+        // @media @bw768 {
+        //     display: grid;
+        //     grid-row: 2;
+        // }
     }
 
     &__time {
@@ -75,6 +89,7 @@
         font-style: normal;
         font-weight: 300;
         line-height: 36px;
+
         &[datetime] {
             &::after {
                 content: attr(data-caption);
@@ -82,7 +97,17 @@
                 font-weight: 700;
                 font-size: 16px;
                 line-height: 19px;
+
+                @media @bw768 {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
             }
+        }
+
+        @media @bw768 {
+            font-size: 18px;
+            line-height: 22px;
         }
     }
 
@@ -90,17 +115,59 @@
         font-size: 16px;
         font-weight: 700;
         line-height: 19px;
+
+        @media @bw768 {
+            font-size: 12px;
+            line-height: 14px;
+        }
     }
 
     &__picture {
         display: block;
-        width: 497px;
+        //width: 497px;
         margin: 0 50px;
+
+        // @media @bw768 {
+        //     display: grid;
+        // }
     }
 
     &__image {
         display: block;
         width: 100%;
+    }
+
+    &__title {
+        font-size: 18px;
+        line-height: 25px;
+
+        @media @bw400 {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        &--1 {
+            margin-bottom: 21px;
+        }
+
+        &--2 {
+            margin-top: 34px;
+            margin-bottom: 15px;
+
+            @media @bw768 {
+                margin-top: 14px;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 32px;
+
+        @media @bw400 {
+            font-size: 14px;
+            line-height: 28px;
+        }
     }
 
     &__content {
