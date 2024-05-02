@@ -30,5 +30,17 @@
         border-radius: 29px;
         background-color: @black;
         color: @red;
+
+        transition: color 0.2s;
+
+        &:active {
+            color: @red_dark;
+        }
+
+        &:hover {
+            @media (hover: hover) {
+                color: @red_dark;
+            }
+        }
     }
 }

@@ -3,18 +3,45 @@
     align-items: center;
     gap: 54px;
 
+    &--info {
+        display: flex;
+        flex-direction: column;
+        min-width: 290px;
+        text-align: center;
+        align-items: center;
+
+        @media @bw960 {
+            max-width: 280px;
+        }
+
+        @media @bw600 {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+        }
+
+        // &--order {
+        //     @media @bw320 {
+        //         flex-direction: row;
+        //         gap: 100px;
+        //     }
+        // } 
+    }
+
     @media @bw960 {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+        width: 137px;
     }
 
     @media @bw600 {
+        width: auto;
         flex-direction: row;
         text-align: left;
         gap: 44px;
     }
-
+    
     @media @bw320 {
         flex-direction: row;
         text-align: start;
@@ -33,6 +60,11 @@
         @media @bw320 {
             min-width: 65px;
             height: 65px;
+        }
+
+        &--info {
+            max-width: 110px;
+
         }
     }
     &__title {

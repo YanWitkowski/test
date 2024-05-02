@@ -1,7 +1,7 @@
 .event-card {
     display: flex;
     width: 405px;
-    max-width: 280px;
+    height: auto;
     color: @black;
 
     &__link {
@@ -48,10 +48,34 @@
             padding-top: 107, 16%;
         }
     }
-}
 
-.event-card__title {
-    font-size: 24px;
-    font-weight: 700;
-    margin: -1px;
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin: -1px;
+
+        @media @bw960 {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 27px;
+        }
+
+        @media @bw400 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+
+        @media @bw400 {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
 }

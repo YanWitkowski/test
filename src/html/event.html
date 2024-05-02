@@ -98,6 +98,33 @@
     @@include('blocks/page-footer.html')
 
     @@include('blocks/event-pp.html')
+
+    <script src="scripts/jquery.validate.min.js"></script>
+  <script src="scripts/jquery.validate-init.js"></script>
+  <script src="scripts/toastr.min.js"></script>
+  <script type="text/javascript">
+      Command: toastr["success"]("Вы все сделали правильно", "Успех")
+
+      toastr.options = {
+          "closeButton": false,
+          "debug": false,
+          "newestOnTop": false,
+          "progressBar": false,
+          "positionClass": "toast-top-right",
+          "preventDuplicates": false,
+          "onclick": null,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "5000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+      }
+
+  </script>
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>

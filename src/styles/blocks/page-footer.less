@@ -75,7 +75,7 @@
     }
 
     &__nav-link {
-        display: block;
+        display: flex;
         text-decoration: none;
         font-size: 16px;
         font-weight: 600;
@@ -94,6 +94,14 @@
 
         @media @bw768 {
             font-size: 14px;
+        }
+
+        @media @bw550 {
+            display: block;
+        }
+
+        @media @bw450 {
+            display: flex;
         }
     }
 
@@ -183,6 +191,7 @@
     &__tagree {
         padding-left: 15px;
         transition: color 0.2s;
+        margin-top: 3px;
 
             &:active {
                 color: @red_dark;
