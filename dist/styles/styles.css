@@ -2455,6 +2455,12 @@ button.swiper-pagination-bullet {
   background-color: #a51505;
   color: #ffffff;
 }
+.scene__table.active[data-check='table_1'] {
+  fill: #BC3324;
+}
+.scene__table.active[data-check='table_2'] {
+  fill: #1F1E1E;
+}
 .link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3723,6 +3729,7 @@ button.swiper-pagination-bullet {
 }
 .reserve__order {
   grid-area: order;
+  width: 342px;
 }
 .reserve__scheme {
   grid-area: scheme;
@@ -3800,7 +3807,6 @@ button.swiper-pagination-bullet {
   padding-top: 51.15384%;
 }
 .reserve__scene {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -4065,7 +4071,7 @@ button.swiper-pagination-bullet {
   top: -20px;
 }
 .event {
-  padding: 40px 0 150px;
+  padding: 40px 0 75px;
 }
 .event__container {
   -webkit-box-sizing: border-box;
@@ -4157,6 +4163,7 @@ button.swiper-pagination-bullet {
   font-style: normal;
   font-weight: 300;
   line-height: 36px;
+  padding-bottom: 11px;
 }
 .event__time[datetime]::after {
   content: attr(data-caption);
@@ -4874,6 +4881,9 @@ button.swiper-pagination-bullet {
   overflow: hidden !important;
   white-space: nowrap !important;
 }
+.highlight {
+  color: #bc3324;
+}
 @media (max-width: 1659px) {
   .swiper--3s .swiper-slide {
     width: calc(33.3333% + 13.3333px);
@@ -4969,6 +4979,13 @@ button.swiper-pagination-bullet {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .reserve {
+    gap: 65px 6.5%;
+    grid-template-columns: 340px calc(93.5% - 340px);
+  }
+  .reserve__submit {
+    padding: 15px 112px;
+  }
   .info__container {
     padding-left: 30px;
     padding-right: 30px;
@@ -5061,6 +5078,11 @@ button.swiper-pagination-bullet {
   }
 }
 @media (max-width: 1019px) {
+  .reserve {
+    gap: 60px;
+    grid-template-columns: auto 390px;
+    grid-template-areas: "scheme scheme" "checks legend" "checks order";
+  }
   .page-header__nav {
     position: absolute;
     left: 0;
@@ -5470,20 +5492,32 @@ button.swiper-pagination-bullet {
     padding-right: 20px;
   }
   .reserve {
-    grid-template-columns: 260px calc(118% - 456px);
-    grid-template-areas: "scheme scheme" "checks legend" "checks order";
+    grid-template-columns: 100%;
+    grid-template-areas: "scheme" "legend" "checks" "order";
+  }
+  .reserve__legend {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    text-align: left;
   }
   .reserve__section-title {
     margin-bottom: 22px;
   }
   .reserve__scene {
-    width: 628px;
-    height: 322px;
+    position: relative;
     min-width: 280px;
     min-height: 144px;
   }
-  .reserve__submit {
-    padding: 15px 112px;
+  .reserve__price {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .reserve__notation {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .info__container {
     padding-left: 20px;
@@ -5501,6 +5535,9 @@ button.swiper-pagination-bullet {
   .events__services {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .event {
+    padding: 40px 0 25px;
   }
   .event__container {
     padding-left: 20px;
@@ -5524,6 +5561,7 @@ button.swiper-pagination-bullet {
   .event__time {
     font-size: 18px;
     line-height: 22px;
+    padding-bottom: 7px;
   }
   .event__info-text {
     font-size: 12px;
@@ -5616,6 +5654,22 @@ button.swiper-pagination-bullet {
   }
   .field__date-input--year {
     min-width: 50px;
+  }
+  .event {
+    padding: 80px 0 25px;
+  }
+  .event__info {
+    width: calc(50% - 10px);
+    margin-top: 40px;
+    margin-right: 20px;
+  }
+  .event__info:last-child {
+    margin-right: 0;
+  }
+  .event__picture {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
   .about__text {
     margin: 0 0 60px 0;
@@ -5779,9 +5833,6 @@ button.swiper-pagination-bullet {
     width: calc(127.3333% - 60px);
     margin: 0 0 60px;
   }
-  .reserve {
-    grid-template-areas: "scheme" "legend" "checks" "order";
-  }
   .page-footer__border::before {
     margin-right: 20px;
   }
@@ -5899,6 +5950,9 @@ button.swiper-pagination-bullet {
   .pp__title {
     max-width: 170px;
   }
+  .reserve__order {
+    width: auto;
+  }
   .events__listing {
     margin-top: 80px;
   }
@@ -5971,6 +6025,13 @@ button.swiper-pagination-bullet {
   }
   .home__listing {
     margin-bottom: 75px;
+  }
+  .event__info {
+    max-height: 129px;
+    width: auto;
+  }
+  .event__time:last-child {
+    padding-bottom: 6px;
   }
   .main-header {
     padding: 20px 0;

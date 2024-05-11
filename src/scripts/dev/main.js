@@ -330,4 +330,40 @@
       pickerInit($(this));
     });
   }
+
+  const checkboxes = document.querySelectorAll('.check__input');
+
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', function () {
+    const tableId = this.getAttribute('value');
+    const table = document.querySelector(`[data-check="table_${tableId}"]`);
+
+    if (table) {
+      if (this.checked) {
+        table.classList.add('active');
+      } else {
+        table.classList.remove('active');
+      }
+    }
+  });
+});
+
+document.querySelectorAll('.scene__table').forEach(item => {
+  item.addEventListener('click', function() {
+    this.classList.toggle('active');
+  });
+});
+
+  // const checkbox = document.getElementById('value');
+  // const scene__table = document.getElementById('data-check');
+
+  // checkbox.addEventListener('change', function () {
+  //   if (this.checked) {
+  //     scene__table.classList.add('highlight');
+  //   } else {
+  //     scene__table.classList.remove('highlight');
+  //   }
+  // });
+
+
 })();
