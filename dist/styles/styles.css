@@ -4881,8 +4881,14 @@ button.swiper-pagination-bullet {
   overflow: hidden !important;
   white-space: nowrap !important;
 }
-.highlight {
-  color: #bc3324;
+#1:checked + #table_1 rect {
+  fill: red;
+}
+#1:checked + #table_1 circle {
+  fill: red;
+}
+#1:checked + #table_1 path {
+  fill: red;
 }
 @media (max-width: 1659px) {
   .swiper--3s .swiper-slide {
