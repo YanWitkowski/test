@@ -128,43 +128,4 @@
             <div class="reserve__note reserve__note--booked">забронировано</div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const checkboxes = document.querySelectorAll('.check__input');
-            const tables = document.querySelectorAll('.js-sceneTable');
-
-            const toggleTableHighlight = (checkbox, tableElement) => {
-                const tableNumber = tableElement.querySelector('.scene__table-num');
-                if (checkbox.checked) {
-                    if (checkbox.closest('.check--red')) {
-                        tableElement.classList.add('highlight-red');
-                    } else {
-                        tableElement.classList.add('highlight-black');
-                    }
-                    tableNumber.classList.add('highlight-white');
-                } else {
-                    tableElement.classList.remove('highlight-red', 'highlight-black');
-                    tableNumber.classList.remove('highlight-white');
-                }
-            };
-
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', (event) => {
-                    const tableId = event.target.getAttribute('data-table');
-                    const tableElement = document.getElementById(tableId);
-                    toggleTableHighlight(event.target, tableElement);
-                });
-            });
-
-            tables.forEach(table => {
-                table.addEventListener('click', () => {
-                    const tableId = table.getAttribute('id');
-                    const checkbox = document.querySelector(`.check__input[data-table="${tableId}"]`);
-                    checkbox.checked = !checkbox.checked;
-                    toggleTableHighlight(checkbox, table);
-                });
-            });
-        });
-    </script>
 </form>
