@@ -4881,14 +4881,14 @@ button.swiper-pagination-bullet {
   overflow: hidden !important;
   white-space: nowrap !important;
 }
-#1:checked + #table_1 rect {
-  fill: red;
+.highlight-red {
+  fill: #bc3324;
 }
-#1:checked + #table_1 circle {
-  fill: red;
+.highlight-black {
+  fill: #1f1e1e;
 }
-#1:checked + #table_1 path {
-  fill: red;
+.highlight-white {
+  fill: #ffffff;
 }
 @media (max-width: 1659px) {
   .swiper--3s .swiper-slide {
@@ -5289,6 +5289,11 @@ button.swiper-pagination-bullet {
   }
   .about__block2 {
     gap: 28px;
+  }
+}
+@media (max-width: 923px) {
+  .check span.error {
+    padding-top: 40px;
   }
 }
 @media (max-width: 767px) {
@@ -5819,6 +5824,11 @@ button.swiper-pagination-bullet {
     display: block;
   }
 }
+@media (max-width: 532px) {
+  .check span.error {
+    padding-top: 60px;
+  }
+}
 @media (max-width: 499px) {
   .selectric-wrapper::after {
     right: 12px;
@@ -5908,6 +5918,16 @@ button.swiper-pagination-bullet {
     gap: 117px;
   }
 }
+@media (max-width: 443px) {
+  .check span.error {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 404px) {
+  .check span.error {
+    padding-top: 105px;
+  }
+}
 @media (max-width: 399px) {
   .swiper-pagination-bullet {
     width: 9px;
@@ -5969,6 +5989,16 @@ button.swiper-pagination-bullet {
   .event__text {
     font-size: 14px;
     line-height: 28px;
+  }
+}
+@media (max-width: 362px) {
+  .check span.error {
+    padding-top: 125px;
+  }
+}
+@media (max-width: 335px) {
+  .check span.error {
+    padding-top: 145px;
   }
 }
 @media (max-width: 319px) {

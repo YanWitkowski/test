@@ -5,67 +5,67 @@
         </h4>
 
         <label class="reserve__check check check--red">
-            <input type="checkbox" id="1" name="table" class="check__input" />
+            <input type="checkbox" id="1" name="table" class="check__input" data-table="table_1"/>
             <span class="check__mark"></span>
             <span class="check__label">1 стол</span>
         </label>
 
         <label class="reserve__check check">
-            <input type="checkbox" name="table" class="check__input" value="2" />
+            <input type="checkbox" name="table" class="check__input" value="2" data-table="table_2"/>
             <span class="check__mark"></span>
             <span class="check__label">2 стол</span>
         </label>
 
         <label class="reserve__check check">
-            <input type="checkbox" name="table" class="check__input" value="3"/>
+            <input type="checkbox" name="table" class="check__input" value="3" data-table="table_3"/>
             <span class="check__mark"></span>
             <span class="check__label">3 стол</span>
         </label>
 
         <label class="reserve__check check check--red">
-            <input type="checkbox" name="table" class="check__input" value="4"/>
+            <input type="checkbox" name="table" class="check__input" value="4" data-table="table_4"/>
             <span class="check__mark"></span>
             <span class="check__label">4 стол</span>
         </label>
 
         <label class="reserve__check check check--disabled">
-            <input type="checkbox" name="table" class="check__input" disabled />
+            <input type="checkbox" name="table" class="check__input" disabled data-table="table_5"/>
             <span class="check__mark"></span>
             <span class="check__label">5 стол</span>
         </label>
 
         <label class="reserve__check check">
-            <input type="checkbox" name="table" class="check__input" value="6"/>
+            <input type="checkbox" name="table" class="check__input" value="6" data-table="table_6"/>
             <span class="check__mark"></span>
             <span class="check__label">6 стол</span>
         </label>
 
         <label class="reserve__check check check--red">
-            <input type="checkbox" name="table" class="check__input" value="7"/>
+            <input type="checkbox" name="table" class="check__input" value="7" data-table="table_7"/>
             <span class="check__mark"></span>
             <span class="check__label">7 стол</span>
         </label>
 
         <label class="reserve__check check check--red">
-            <input type="checkbox" name="table" class="check__input" value="8"/>
+            <input type="checkbox" name="table" class="check__input" value="8" data-table="table_8"/>
             <span class="check__mark"></span>
             <span class="check__label">8 стол</span>
         </label>
 
         <label class="reserve__check check check--red">
-            <input type="checkbox" name="table" class="check__input" value="9"/>
+            <input type="checkbox" name="table" class="check__input" value="9" data-table="table_9"/>
             <span class="check__mark"></span>
             <span class="check__label">9 стол</span>
         </label>
 
         <label class="reserve__check check">
-            <input type="checkbox" name="table" class="check__input" value="10"/>
+            <input type="checkbox" name="table" class="check__input" value="10" data-table="table_10"/>
             <span class="check__mark"></span>
             <span class="check__label">10 стол</span>
         </label>
 
         <label class="reserve__check check">
-            <input type="checkbox" name="table" class="check__input" value="11"/>
+            <input type="checkbox" name="table" class="check__input" value="11" data-table="table_11"/>
             <span class="check__mark"></span>
             <span class="check__label">11 стол</span>
         </label>
@@ -128,4 +128,43 @@
             <div class="reserve__note reserve__note--booked">забронировано</div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const checkboxes = document.querySelectorAll('.check__input');
+            const tables = document.querySelectorAll('.js-sceneTable');
+
+            const toggleTableHighlight = (checkbox, tableElement) => {
+                const tableNumber = tableElement.querySelector('.scene__table-num');
+                if (checkbox.checked) {
+                    if (checkbox.closest('.check--red')) {
+                        tableElement.classList.add('highlight-red');
+                    } else {
+                        tableElement.classList.add('highlight-black');
+                    }
+                    tableNumber.classList.add('highlight-white');
+                } else {
+                    tableElement.classList.remove('highlight-red', 'highlight-black');
+                    tableNumber.classList.remove('highlight-white');
+                }
+            };
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', (event) => {
+                    const tableId = event.target.getAttribute('data-table');
+                    const tableElement = document.getElementById(tableId);
+                    toggleTableHighlight(event.target, tableElement);
+                });
+            });
+
+            tables.forEach(table => {
+                table.addEventListener('click', () => {
+                    const tableId = table.getAttribute('id');
+                    const checkbox = document.querySelector(`.check__input[data-table="${tableId}"]`);
+                    checkbox.checked = !checkbox.checked;
+                    toggleTableHighlight(checkbox, table);
+                });
+            });
+        });
+    </script>
 </form>
